@@ -76,7 +76,7 @@ echo '<html lang="en">';
 
 		echo '</main>';
 
-		echo '<footer>Created with ♥ by <a href="https://twitter.com/KawaiiHannahArt" target="_blank">Hannah Malcolm</a> - View this project on <a href="#">GitHub</a></footer>';
+		echo '<footer>Created with ♥ by <a href="https://twitter.com/KawaiiHannahArt" target="_blank">Hannah Malcolm</a> - View this project on <a href="https://github.com/KawaiiHannah/pixel-character" target="_blank">GitHub</a></footer>';
 
 	echo '</body>';
 
