@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------------------------
+*
+*	Pixel Maker - Tools
+*
+-------------------------------------------------------------------------------------*/
+
+
+/**
+ *	Retrieve the sprite location (in pixels)
+ */
+@function pm-get-sprite-map-element( $x, $y, $width: $pm-sprite-item--width, $height: $pm-sprite-item--height ) {
+
+	@return ( ( $x - 1 ) * $width * -1 ) ( ( $y - 1 ) * $height * -1 );
+
+}
+
+
+
+
+/**
+ *	Include the markup for a sprite element
+ */
+@mixin pm-sprite-map-element( $item, $x, $y ) {
+
+	#{ $item }:checked + label::after,
+	#{ $item } + label::before {
+
+		background-position: pm-get-sprite-map-element( $x, $y );
+
+	}
+
+}

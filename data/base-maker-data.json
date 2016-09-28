@@ -1,0 +1,313 @@
+{
+	"Skintones": {
+
+		"li": {
+
+			"name": "Light",
+			"x":"1", 
+	    	"y":"1"
+
+		},
+		"me": {
+
+			"name": "Medium",
+			"x":"2", 
+	    	"y":"1"
+
+		},
+		"da": {
+
+			"name": "Dark",
+			"x":"3", 
+	    	"y":"1"
+
+		}
+
+	},
+	"Hairstyles": {
+		"h6": {
+
+			"name":"Medium - Brown", 
+	    	"x":"5", 
+	    	"y":"2"
+
+		},
+		"h7": {
+
+			"name":"Medium - Blonde", 
+	    	"x":"6", 
+	    	"y":"2"
+
+		},
+		"h8": {
+
+			"name":"Medium - Black", 
+	    	"x":"7", 
+	    	"y":"2"
+
+		},
+		"h9": {
+
+			"name":"Medium - Red", 
+	    	"x":"8", 
+	    	"y":"2"
+
+		},
+		"h10": {
+
+			"name":"Emo - Brown", 
+	    	"x":"1", 
+	    	"y":"3"
+
+		},
+		"h11": {
+
+			"name":"Emo - Blonde", 
+	    	"x":"2", 
+	    	"y":"3"
+
+		},
+		"h12": {
+
+			"name":"Emo - Black", 
+	    	"x":"3", 
+	    	"y":"3"
+
+		},
+		"h13": {
+
+			"name":"Emo - Red", 
+	    	"x":"4", 
+	    	"y":"3"
+
+		},
+		"h14": {
+
+			"name":"Short - Brown", 
+	    	"x":"5", 
+	    	"y":"3"
+
+		},
+		"h15": {
+
+			"name":"Short - Blonde", 
+	    	"x":"6", 
+	    	"y":"3"
+
+		},
+		"h16": {
+
+			"name":"Short - Black", 
+	    	"x":"7", 
+	    	"y":"3"
+
+		},
+		"h16": {
+
+			"name":"Short - Red", 
+	    	"x":"8", 
+	    	"y":"3"
+
+		},
+		"h17": {
+
+			"name":"Ponytail - Brown", 
+	    	"x":"9", 
+	    	"y":"1"
+
+		},
+		"h18": {
+
+			"name":"Ponytail - Blonde", 
+	    	"x":"9", 
+	    	"y":"2"
+
+		},
+		"h19": {
+
+			"name":"Ponytail - Black", 
+	    	"x":"9", 
+	    	"y":"3"
+
+		},
+		"h20": {
+
+			"name":"Ponytail - Red", 
+	    	"x":"9", 
+	    	"y":"4"
+
+		}
+
+	},
+	"Pants": {
+
+		"p1": {
+
+			"name":"Jeans", 
+	    	"x":"1", 
+	    	"y":"2"
+
+		},
+		"p2": {
+
+			"name":"Pants - Black", 
+	    	"x":"2", 
+	    	"y":"2"
+
+		}
+
+	},
+	"Bottoms": {
+
+		"s0": {
+
+			"name":"No Skirt", 
+	    	"x":"0", 
+	    	"y":"0"
+
+		},
+		"s1": {
+
+			"name":"Skirt - Black with Pink Flowers", 
+	    	"x":"3", 
+	    	"y":"2"
+
+		},
+		"s2": {
+
+			"name":"Pencil Skirt - Grey", 
+	    	"x":"4", 
+	    	"y":"2"
+
+		}
+
+	},
+	"Tops": {
+
+		"t1": {
+
+			"name":"Hoodie - Grey", 
+	    	"x":"1", 
+	    	"y":"4"
+
+		},
+		"t2": {
+
+			"name":"Hoodie - Dark", 
+	    	"x":"2", 
+	    	"y":"4"
+
+		},
+		"t3": {
+
+			"name":"Jacket & T-Shirt - Dark", 
+	    	"x":"3", 
+	    	"y":"4"
+
+		},
+		"t4": {
+
+			"name":"Singlet - Black", 
+	    	"x":"4", 
+	    	"y":"4"
+
+		},
+		"t5": {
+
+			"name":"Long Sleeved - Black", 
+	    	"x":"5", 
+	    	"y":"4"
+
+		},
+		"t6": {
+
+			"name":"T Shirt - White", 
+	    	"x":"6", 
+	    	"y":"4"
+
+		}
+
+	},
+	"FacialHair": {
+
+		"f0": {
+
+			"name":"No Facial Hair", 
+	    	"x":"0", 
+	    	"y":"0"
+
+		},
+		"f1": {
+
+			"name":"Brown Beard", 
+	    	"x":"5", 
+	    	"y":"1"
+
+		},
+		"f2": {
+
+			"name":"Blonde Beard", 
+	    	"x":"6", 
+	    	"y":"1"
+
+		},
+		"f3": {
+
+			"name":"Black Beard", 
+	    	"x":"7", 
+	    	"y":"1"
+
+		},
+		"f4": {
+
+			"name":"Red Beard", 
+	    	"x":"8", 
+	    	"y":"1"
+
+		}
+
+	},
+	"Accessories": {
+
+		"a0": {
+
+			"name":"No Accessories", 
+	    	"x":"0", 
+	    	"y":"0"
+
+		},
+		"a1": {
+
+			"name":"Glasses", 
+	    	"x":"4", 
+	    	"y":"1"
+
+		}
+
+	},
+	"Shoes": {
+
+		"s1": {
+
+			"name":"Black Shoes", 
+	    	"x":"8", 
+	    	"y":"4"
+
+		},
+		"s2": {
+
+			"name":"White Shoes", 
+	    	"x":"7", 
+	    	"y":"4"
+
+		},
+		"s3": {
+
+			"name":"No Shoes", 
+	    	"x":"0", 
+	    	"y":"0"
+
+		}
+
+	}
+}

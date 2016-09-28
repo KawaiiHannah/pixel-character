@@ -1,0 +1,16 @@
+{
+  "bitwise": false,
+  "browser": false,
+  "curly": false,
+  "eqeqeq": false,
+  "eqnull": false,
+  "esnext": false,
+  "immed": false,
+  "jquery": false,
+  "latedef": false,
+  "newcap": false,
+  "noarg": false,
+  "node": false,
+  "strict": false,
+  "trailing": false
+}
