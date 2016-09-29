@@ -53,6 +53,7 @@ body {
 
 	legend {
 
+		color: #fff !important;
 		margin-bottom: .25em;
 
 	}
@@ -378,9 +379,10 @@ body {
 
 	.wrap {
 
+		display: inline-block;
 		max-width: 1170px;
-		margin: 0 auto;
 		position: relative;
+		width: 100%;
 
 	}
 
@@ -390,8 +392,6 @@ body {
 
 		border: 2px solid #fff;
 		display: inline-block;
-		margin-left: auto;
-		margin-right: auto;
 		padding: 2em 2.75em 0 2.75em;
 		margin-top: -2.5em;
 
