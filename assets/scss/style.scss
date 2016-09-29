@@ -324,29 +324,30 @@ body {
 	}
 
 
-	
+	// Decorative shadow
+	form:before,
+	#final-img:before {
+
+		background-color: $pm-color--secondary-dark;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		height: 10px;
+		left: 50%;
+		margin-left: -( ( $pm-sprite-item--width * .4 ) );
+		position: absolute;
+		top: ( $pm-sprite-item--height - 10px );
+		width: ( $pm-sprite-item--width * .8 );
+		z-index: -1;
+
+	}
+
 
 
 
 	form {
 
 		padding-top: ( $pm-sprite-item--height + 80px );
-
-		&:before {
-
-			background-color: $pm-color--secondary-dark;
-			border-radius: 50%;
-			content: "";
-			display: inline-block;
-			height: 10px;
-			position: absolute;
-			top: ( $pm-sprite-item--height - 10px );
-			width: ( $pm-sprite-item--width * .8 );
-			left: 50%;
-			margin-left: -( ( $pm-sprite-item--width * .4 ) );
-
-		}
-		// text-align: left;
 
 	}
 
@@ -392,8 +393,9 @@ body {
 
 		border: 2px solid #fff;
 		display: inline-block;
-		padding: 2em 2.75em 0 2.75em;
+		margin-bottom: 2em;
 		margin-top: -2.5em;
+		padding: 2em 2.75em 0 2.75em;
 
 		.o-b {
 
@@ -546,5 +548,15 @@ body {
 		position: fixed;
 		width: 100%;
 		font-size: .8em;
+
+	}
+
+
+
+	#final-img {
+
+		display: inline-block;
+		margin: 1em;
+		position: relative;
 
 	}

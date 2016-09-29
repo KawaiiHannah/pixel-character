@@ -119,12 +119,19 @@ class KHPixelMaker {
 			echo '<legend class="t-u t-tn t-s">' . $legend . '</legend>';
 
 			$counter = 0;
+			$rand = rand( 0, ( count( $fieldset ) - 1 ) );
+
+			if ( $legend == 'FacialHair' ) {
+
+				$rand = 0;
+
+			}
 
 			foreach( $fieldset as $itemnum => $item ) {
 
 				$selected = '';
 
-				if ( $counter == 0 ) {
+				if ( $counter == $rand ) {
 
 					$selected = ' checked="checked"';
 

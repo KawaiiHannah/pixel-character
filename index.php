@@ -22,7 +22,7 @@ echo '<html lang="en">';
 
 		echo '<main>';
 
-			if ( isset( $_GET[ 'save' ] ) ) {
+			if ( isset( $_GET[ 'save' ] ) && isset( $_POST[ 'sk' ] ) ) {
 
 				echo '<section class="sc gr" id="save">';
 
@@ -31,12 +31,12 @@ echo '<html lang="en">';
 
 					if ( $image ) {
 
-						echo '<div>';
+						echo '<div class="deco">';
 
 							echo '<h1 class="t-u t-s" id="h-save">Your Pixel Art Character</h1>';
 							echo '<p>Right click and save your pixel art character below.</p>';
-							echo '<img alt="Generated Character Image" src="' . $image . '">';
-							echo '<p class="o-b"><a class="btn t-u t-tn" href="index.php#create">Start Again</a></p>';
+							echo '<div id="final-img"><img alt="Generated Character Image" src="' . $image . '"></div>';
+							echo '<p class="o-b"><a class="btn t-u t-tn" href="' . $image . '" download="pixel-character.png">Download</a> <a class="btn t-u t-tn" href="index.php#create">Start Again</a></p>';
 
 						echo '</div>';
 
