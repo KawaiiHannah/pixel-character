@@ -126,7 +126,7 @@ class KHPixelMaker {
 
 				if ( $counter == 0 ) {
 
-					$selected = ' checked';
+					$selected = ' checked="checked"';
 
 				}
 
