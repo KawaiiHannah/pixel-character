@@ -34,7 +34,7 @@ echo '<html lang="en">';
 						echo '<div class="deco">';
 
 							echo '<h1 class="t-u t-s" id="h-save">Your Pixel Art Character</h1>';
-							echo '<p>Right click and save your pixel art character below.</p>';
+							echo '<p>Save your pixel art character below.</p>';
 							echo '<div id="final-img"><img alt="Generated Character Image" src="' . $image . '"></div>';
 							echo '<p class="o-b"><a class="btn t-u t-tn" href="' . $image . '" download="pixel-character.png">Download</a> <a class="btn t-u t-tn" href="index.php#create">Start Again</a></p>';
 
