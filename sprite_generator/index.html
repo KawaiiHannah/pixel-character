@@ -5,6 +5,8 @@
 <body>
     <div class="hidden">
     <script type="text/javascript">
+        //src https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/
+        //preloading all images
         <!--//--><![CDATA[//><!--
             var images = new Array()
             function preload() {
@@ -50,6 +52,7 @@
 <script>
     let lol = [],count = 0
 
+    //generates Chars
     function test(count){
         var c = document.getElementById("canvas2"),
             ctx = c.getContext("2d"),
@@ -62,14 +65,15 @@
         c.width = width
         c.height = height
 
+        //draws body
         ctx.drawImage(images[getRndInteger(0,2)],0,0);
+        //draws legs
         ctx.drawImage(images[getRndInteger(9,11)],0,0);
+        //draws tops
         ctx.drawImage(images[getRndInteger(12,16)],0,0);
 
-
+        //specific chance to have beard
         if(Math.random() > 0.4){
-
-
             //draw beard and  apply random color
             ctx.drawImage(images[3],0,0);
 
@@ -116,6 +120,20 @@
         download(c.toDataURL(),"sprite_cha_"+count+".png")
     }
 
+    let count2 = 0
+    function generateChars(){
+        let amount = document.getElementById("amount").value
+        setTimeout(function(){
+            if(count2 < amount){
+
+                test(count2)
+                count2++;
+                generateChars(amount)
+            }
+        }, 300);
+    }
+
+    //used to get separat images from sprite sheet
     function start(){
         var c = document.getElementById("canvas"),
             img = document.getElementById("image"),
@@ -130,7 +148,7 @@
 
         var ctx = c.getContext("2d");
 
-        
+        //drawing to an canvas
         for(let j = 0; j < 4; j++){
             for(let i = 0; i < 9; i++){
 
@@ -141,6 +159,7 @@
                 pixels = chunk(opixels.data,4)
                 pixels.forEach(function(pixel,index,array){
                     if(pixel[0] === 255 && pixel[1] === 255 && pixel[2] === 255 && pixel[3] === 255){
+                        //calculates index in big pixel array from getImageData and set alpha to 0
                         opixels.data[index*4+3] = 0
                     }
                 })
@@ -155,6 +174,7 @@
 
     }
 
+    //src https://stackoverflow.com/a/24782004/14077167
     function chunk(arr, chunkSize) {
       if (chunkSize <= 0) throw "Invalid chunk size";
       var R = [];
@@ -164,19 +184,9 @@
     }
 
 
-    let count2 = 0
-    function generateChars(){
-        let amount = document.getElementById("amount").value
-        setTimeout(function(){
-            if(count2 < amount){
+  
 
-                test(count2)
-                count2++;
-                generateChars(amount)
-            }
-        }, 300);
-    }
-
+    //used to loop through seperate dataurl images an download them
     function loop(){
         setTimeout(function(){
             if(count < lol.length){
@@ -188,6 +198,7 @@
         }, 300);
     }
 
+    //src https://stackoverflow.com/a/45905238/14077167
     function download(dataurl, filename) {
       var a = document.createElement("a");
       a.href = dataurl;
@@ -195,6 +206,7 @@
       a.click();
     }
 
+    //src https://www.w3schools.com/js/js_random.asp
     function getRndInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
