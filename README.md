@@ -9,5 +9,5 @@ If you want to resize the image to make it larger/smaller, use 'Nearest Neighbou
 
 Copyright 2016 Hannah Malcolm.
 
-##Added Generator
+## Added Generator
 i added an small javascript site which generates dynamic amount of random generated Characters using this sprite sheet
