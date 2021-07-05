@@ -1,0 +1,203 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="hidden">
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload(
+                "sprites/body_1.png", //0
+                "sprites/body_2.png",
+                "sprites/body_3.png",
+                "sprites/beard_1.png",//3
+                "sprites/face_1.png",
+                "sprites/hair_1.png",//5
+                "sprites/hair_2.png",
+                "sprites/hair_3.png",
+                "sprites/hair_4.png",//8
+                "sprites/legs_1.png",//9
+                "sprites/legs_2.png",
+                "sprites/legs_3.png",//11
+                "sprites/top_1.png",//12
+                "sprites/top_2.png",
+                "sprites/top_3.png",
+                "sprites/top_4.png",
+                "sprites/top_5.png",//16
+                "sprites/foot_1.png"//17
+            )
+        //--><!]]>
+    </script>
+</div>
+    <img src="sprite-sheet-01.png" id="image" style="display:none;">
+    <canvas style="display:none;" id="canvas" ></canvas>
+    <center>
+        <span>Amount</span>
+        <input id="amount" type="number" value="5">
+        <button onclick="generateChars()">generateChars</button>
+        <canvas id="canvas2" ></canvas>
+        <div>
+            <a href="https://www.mttr.io/blog/web-development/designing-pixel-art-character-10kb/">Inspiration and sprite source</p>
+        </div>
+    </center>
+<script>
+    let lol = [],count = 0
+
+    function test(count){
+        var c = document.getElementById("canvas2"),
+            ctx = c.getContext("2d"),
+            opixels = [],
+            pixels = [],
+            width = 64,
+            height = 136
+
+
+        c.width = width
+        c.height = height
+
+        ctx.drawImage(images[getRndInteger(0,2)],0,0);
+        ctx.drawImage(images[getRndInteger(9,11)],0,0);
+        ctx.drawImage(images[getRndInteger(12,16)],0,0);
+
+
+        if(Math.random() > 0.4){
+
+
+            //draw beard and  apply random color
+            ctx.drawImage(images[3],0,0);
+
+            opixels = ctx.getImageData(0,0,width,height)
+            pixels = chunk(opixels.data,4)
+
+            let r = getRndInteger(0,255),
+                g = getRndInteger(0,255),
+                b = getRndInteger(0,255)
+
+            pixels.forEach(function(pixel,index,array){
+                if(pixel[0] === 76 && pixel[1] === 51 && pixel[2] === 32 && pixel[3] === 255){
+                    opixels.data[index*4] = r
+                    opixels.data[index*4+1] = g
+                    opixels.data[index*4+2] = b
+                }
+            })
+            ctx.putImageData(opixels,0,0)
+        }
+        if(Math.random() > 0.2){
+
+
+            //draw beard and  apply random color
+            ctx.drawImage(images[4],0,0);
+        }
+
+        //draw hair and  apply random color
+        ctx.drawImage(images[getRndInteger(5,8)],0,0);
+        opixels = ctx.getImageData(0,0,width,height)
+        pixels = chunk(opixels.data,4)
+
+        r = getRndInteger(0,255)
+        g = getRndInteger(0,255)
+        b = getRndInteger(0,255)
+
+        pixels.forEach(function(pixel,index,array){
+            if(pixel[0] === 76 && pixel[1] === 51 && pixel[2] === 32 && pixel[3] === 255){
+                opixels.data[index*4] = r
+                opixels.data[index*4+1] = g
+                opixels.data[index*4+2] = b
+            }
+        })
+        ctx.putImageData(opixels,0,0)
+        download(c.toDataURL(),"sprite_cha_"+count+".png")
+    }
+
+    function start(){
+        var c = document.getElementById("canvas"),
+            img = document.getElementById("image"),
+            width = img.width/9,
+            height = img.height/4,
+            pixels = [],
+            opixels = []
+
+
+        c.width = width
+        c.height = height
+
+        var ctx = c.getContext("2d");
+
+        
+        for(let j = 0; j < 4; j++){
+            for(let i = 0; i < 9; i++){
+
+                ctx.drawImage(img,i*width,j*height,width,height, 0, 0,width,height);
+                //makes white pixels transparetn
+                //using chunk function to scan easier
+                opixels = ctx.getImageData(0,0,width,height)
+                pixels = chunk(opixels.data,4)
+                pixels.forEach(function(pixel,index,array){
+                    if(pixel[0] === 255 && pixel[1] === 255 && pixel[2] === 255 && pixel[3] === 255){
+                        opixels.data[index*4+3] = 0
+                    }
+                })
+                ctx.putImageData(opixels,0,0)
+
+                lol.push(c.toDataURL())
+                ctx.fillStyle = "#FFFFFF";
+                ctx.fillRect(0, 0, 64, 136);
+            }
+        }
+        console.log(lol)
+
+    }
+
+    function chunk(arr, chunkSize) {
+      if (chunkSize <= 0) throw "Invalid chunk size";
+      var R = [];
+      for (var i=0,len=arr.length; i<len; i+=chunkSize)
+        R.push(arr.slice(i,i+chunkSize));
+      return R;
+    }
+
+
+    let count2 = 0
+    function generateChars(){
+        let amount = document.getElementById("amount").value
+        setTimeout(function(){
+            if(count2 < amount){
+
+                test(count2)
+                count2++;
+                generateChars(amount)
+            }
+        }, 300);
+    }
+
+    function loop(){
+        setTimeout(function(){
+            if(count < lol.length){
+
+                download(lol[count],"sprite_solo_file_"+count+".png")
+                count++;
+                loop()
+            }
+        }, 300);
+    }
+
+    function download(dataurl, filename) {
+      var a = document.createElement("a");
+      a.href = dataurl;
+      a.setAttribute("download", filename);
+      a.click();
+    }
+
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+</script>
+</body>
+</html>
