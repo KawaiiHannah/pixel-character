@@ -8,3 +8,6 @@ Can you change images made with this generator? Yes, you're welcome to edit them
 If you want to resize the image to make it larger/smaller, use 'Nearest Neighbour' interpolation and save as a PNG or GIF. This will keep the pixels nice and crisp.
 
 Copyright 2016 Hannah Malcolm.
+
+##Added Generator
+i added an small javascript site which generates dynamic amount of random generated Characters using this sprite sheet
