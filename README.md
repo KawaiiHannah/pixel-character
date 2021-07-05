@@ -12,3 +12,7 @@ Copyright 2016 Hannah Malcolm.
 ## Added Sprite Generator
 Small js script which generates random Characters from sprite sheet.
 
+allow auto download (read the source code if you are unsafe)
+
+Hosted at [http://projectlifetime.de/sprite_generator/](http://projectlifetime.de/sprite_generator/)
+
